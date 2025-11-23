@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sean 💚</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&family=Rock+Salt&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="spiderman" class="spiderman">
+  <div class="spidey-web"></div>
+  <div class="spidey-body"></div>
+</div>
+
+  <!-- Background hearts container (matches bday page) -->
+  <div id="bgHearts"></div>
+
+<div id="dancing-avocado" class="dancing-avocado">
+  <div class="avocado-body"></div>
+  <div class="avocado-face"></div>
+</div>
+
+<div id="password-screen" class="password-card active">
+  <div class="password-border">
+    <div class="flower flower-tl"></div>
+    <div class="flower flower-tr"></div>
+    <div class="flower flower-bl"></div>
+    <div class="flower flower-br"></div>
+    <div class="password-flex">
+      <div class="password-left">
+        <h1 class="password-title">Password!</h1>
+        <p class="password-sub">You need to enter a Password!</p>
+      </div>
+      <div class="password-right">
+        <input id="pwdInput" type="password" class="password-input" placeholder="Type password here..." />
+        <button id="pwdBtn" class="btn password-btn">Unlock</button>
+        <button id="pwdHint" class="btn alt password-hint">Need hint?</button>
+        <p id="pwdMsg" class="hint"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="app" style="display: none; width: 100%;">
+  
+  <section id="scene-1" class="panel active">
+    <h1 class="title">Happy Birthday, Sean! 💚🎂</h1>
+    
+    <img src="assets/images/snoopy.png" alt="Snoopy" class="scattered-img" style="top: 5%; left: 3%;">
+    <img src="assets/images/yogurt.png" alt="Yogurt" class="scattered-img" style="top: 20%; right: 5%;">
+    <img src="assets/images/kartrider.png" alt="KartRider" class="scattered-img" style="bottom: 15%; left: 8%;">
+    <img src="assets/images/shy.png" alt="shy" class="scattered-img" style="top: 15%; right: 15%;">
+    
+    <!-- Envelope / Letter: click to open and reveal the greeting typed slowly -->
+    <!-- Snoopy holding the letter. Clicking Snoopy reveals the letter and swaps to a "writing" Snoopy. -->
+    <div class="envelope-wrap snoopy-wrap">
+      <button id="snoopyBtn" class="snoopy-btn" title="Open letter">
+        <img src="assets/images/snoopy1.png" alt="Snoopy" class="snoopy-img" id="snoopyIdle">
+      </button>
+
+      <!-- second image shows Snoopy writing; initially hidden. Add your writing image at this path. -->
+      <img src="assets/images/snoopy_write.png" alt="Snoopy writing" class="snoopy-img hidden" id="snoopyWrite">
+
+      <div id="letter" class="letter hidden" aria-hidden="true">
+        <div id="greetingTypeArea" class="greeting-typearea"></div>
+        <div class="letter-footer">— from Cliff </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <button id="toScene2" class="btn">Next ➜</button>
+    </div>
+  </section>
+
+  <section id="scene-2" class="panel">
+    <h2 class="title small">Are you ready sean?</h2>
+    
+    <img src="assets/images/martin1.png" alt="Fave 1" class="scattered-img" style="top: 10%; right: 10%;">
+    <img src="assets/images/mingyu1.png" alt="Fave 2" class="scattered-img" style="bottom: 15%; left: 5%;">
+    <img src="assets/images/conrad1.png" alt="Fave 3" class="scattered-img" style="top: 8%; left: 12%;">
+    
+    <div id="typeArea" class="typearea"></div>
+    <div id="memePrompt" class="memePrompt"></div>
+    <div class="row">
+      <button id="backTo1" class="btn alt">⬅ Back</button>
+      <button id="toScene3" class="btn">Next ➜</button>
+    </div>
+  </section>
+
+  <section id="scene-3" class="panel">
+    <h2 class="title small">So before anything else... 💌</h2>
+    
+    <img src="assets/images/conrad2.png" alt="Fave 4" class="scattered-img" style="top: 8%; left: 5%;">
+    <img src="assets/images/martin2.png" alt="Fave 5" class="scattered-img" style="top: 12%; right: 8%;">
+    <img src="assets/images/mingyu2.png" alt="Fave 6" class="scattered-img" style="bottom: 10%; right: 10%;">
+    
+    <div class="warm-message">
+  <p class="warm-line">Sean, I just wanted to say na you deserve a good and peaceful birthday today. 🎂✨</p>
+  <p class="warm-line">Alam ko minsan busy ka, stressed, tahimik or cold sa chat, and that's okay. I get it. Life gets heavy, lalo na sa archi.</p>
+  <p class="warm-line">Still, I hope this year gives you more calm days, more energy, and moments na hindi ka masyadong napapagod.</p>
+  <p class="warm-line">I may not know you that well yet, pero I really appreciate the small times na nagkaka-interact tayo. Kahit quick or casual lang.</p>
+  <p class="warm-line">Thank you for being you. Sana mas maging kinder ang world sa'yo all year. </p>
+  <p class="warm-line">PS: pag di mo nahipan yung candles, pwede mo i-reset yung site haha.</p>
+</div>
+    
+    <div class="row">
+      <button id="backTo2" class="btn alt">⬅ Back</button>
+      <button id="toCake" class="btn">Next: Cake Time! 🎂</button>
+    </div>
+  </section>
+
+  <section id="scene-4" class="panel">
+    <h2 class="title small">Tap the cake to add candles 🕯️</h2>
+    <p class="lead" id="cakeMsg">Click anywhere on the cake!</p>
+    
+    <img src="assets/images/keyk1.png" alt="Fave 7" class="scattered-img" style="top: 10%; left: 5%;">
+    <img src="assets/images/keyk2.png" alt="Fave 8" class="scattered-img" style="top: 15%; right: 8%;">
+    <img src="assets/images/keyk3.png" alt="Fave 9" class="scattered-img" style="bottom: 12%; left: 10%;">
+    
+    <div class="cake-container" id="cakeContainer">
+      <div class="plate"></div>
+      <div class="layer layer-bottom"></div>
+      <div class="layer layer-middle"></div>
+      <div class="layer layer-top"></div>
+      <div class="icing"></div>
+    </div>
+    
+    <p id="cakeInstruction" class="hint">After adding candles, make a wish and blow! 🎤</p>
+    
+    <div class="row">
+      <button id="backTo3" class="btn alt">⬅ Back</button>
+      <button id="toReasons" class="btn" style="display: none;">Next: Final Part ➜</button>
+    </div>
+  </section>
+
+  <section id="scene-5" class="panel">
+    <h2 class="title small">Bakit nga ba kita nagustuhan? 💭</h2>
+    
+    <img src="assets/images/hart1.png" alt="Spider-Man" class="scattered-img" style="top: 5%; left: 5%;">
+    <img src="assets/images/hart2.png" alt="Fave 1" class="scattered-img" style="top: 10%; right: 8%;">
+    <img src="assets/images/hart3.png" alt="Fave 2" class="scattered-img" style="bottom: 10%; left: 10%;">
+    <img src="assets/images/hart4.png" alt="Fave 3" class="scattered-img" style="bottom: 12%; right: 10%;">
+    
+    <div class="reasons-container">
+      <div class="reason-card hidden">
+        <div class="reason-icon">✨</div>
+        <h3>Your Style & Vibe</h3>
+        <p>Your style? Ang ganda. Yung music taste mo? Chef's kiss. Parang perfectly curated yung playlist ng buhay mo and I just want to be part of it( ay mali ).</p>
+      </div>
+      
+      <div class="reason-card hidden">
+        <div class="reason-icon">😊</div>
+        <h3>That Smile</h3>
+        <p>Your smile. Bro, that smile. It's so cute I literally want to press your cheeks multiple times. Di ko alam kung bakit ang saya-saya tingnan. You're a cutie, like genuinely ! 😭</p>
+      </div>
+      
+      <div class="reason-card hidden">
+        <div class="reason-icon">🤪</div>
+        <h3>Your Goofy Side!</h3>
+        <p>Grabe, yung goofy side mo sa stories, pics, at vids, nakakatuwa sobra. Parang lagi akong napapangiti at naiisip ko, ‘ang saya naman ng vibes neto!’ 😄</p>
+      </div>
+      
+      <div class="reason-card hidden">
+        <div class="reason-icon">💃</div>
+        <h3>You Dance!</h3>
+        <p>And you're a dancer? Like, a really good one? Dude. That's so cool. Watching you dance must be amazing. May talent, may passion, that's so attractive.</p>
+      </div>
+      
+      <div class="reason-card hidden">
+        <div class="reason-icon">🙏</div>
+        <h3>Your Faith</h3>
+        <p>You're close to God. You're faithful. That means so much to me. I was an altar server for like a decade, tapos nag-stop ako because of church issues. But seeing people like you? Makes me want to go back. You inspire me, honestly.</p>
+      </div>
+      
+      <div class="reason-card hidden">
+        <div class="reason-icon">💚</div>
+        <h3>Just... Everything</h3>
+        <p> Your humor, laugh, personality, voice, eyes, smile, hair, aura, you make me laugh sometimes, the way you carry yourself, and YOU !</p>
+      </div>
+    </div>
+    
+    <div class="final-message">
+      <p>So yeah... that's it. Happy Birthday ulit, Sean! 🎉</p>
+      <p>Sana nag-enjoy ka sa website na 'to. Kahit papaano, napangiti kita today. 😊</p>
+    </div>
+    
+    <div class="row">
+      <button id="restart" class="btn alt">Start Over 🔁</button>
+    </div>
+  </section>
+
+</main>
+
+<div id="chatPopup" class="chat-popup">
+  <div class="chat-header">
+    <div class="chat-avatar">💌</div>
+    <div class="chat-info">
+      <div class="chat-name">Secret Message</div>
+      <div class="chat-status">Just now</div>
+    </div>
+    <button class="chat-close" id="closeChatPopup">✕</button>
+  </div>
+  <div class="chat-body">
+    <div class="chat-message">
+      <p>Hey Sean… may short message ako para sa’yo.</p>
+      <p>Gusto mo basahin?</p>
+    </div>
+  </div>
+  <button class="chat-open-btn" id="openSecretMessage">Open Message 💚</button>
+</div>
+
+<div id="secretModal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close" id="closeSecretModal">✕</button>
+    <h2 class="modal-title">🔒 Enter Password</h2>
+    <p class="modal-text">Same password to unlock this message...</p>
+    <input type="password" id="secretPwdInput" class="modal-input" placeholder="Type password...">
+    <button id="unlockSecretBtn" class="btn primary">Unlock 🔓</button>
+    <p id="secretPwdMsg" class="hint"></p>
+  </div>
+</div>
+
+<div id="confessionModal" class="modal">
+  <div class="modal-content confession-content">
+    <button class="modal-close" id="closeConfessionModal">✕</button>
+    <h2 class="modal-title">💌 From me to you</h2>
+    
+    <div class="confession-text">
+  <p class="confLine">Okay… quick message lang.</p>
+
+  <p class="confLine">Since napag-usapan na rin natin before, hindi ko na hahabaan or pa-iikutin. I know you’re not ready to commit and I respect that fully.</p>
+
+  <p class="confLine">Gusto ko lang sabihin na I appreciate the small moments we’ve had. Kahit minsan lang tayo naglalaro or nagkaka-chat, I honestly enjoyed those.</p>
+
+  <p class="confLine">Wala akong hinihingi and I’m not expecting anything from you. Hindi rin ako nandito para mag-pressure or maging heavy.</p>
+
+  <p class="confLine">All I really want is to keep things comfortable for you, and sana okay lang if we still talk or play sometimes, kung kailan kaya mo or free time mo.</p>
+
+  <p class="confLine">No rush, no expectations, no big thing. I just wanted to say this in the most chill and honest way possible.</p>
+
+  <p class="confFrom">from Cliff.</p>
+</div>
+
+    
+    <div id="heartsContainer"></div>
+    
+    <button id="continueToReasons" class="btn primary">Continue ➜</button>
+  </div>
+</div>
+
+<canvas id="confettiCanvas"></canvas>
+
+<audio id="bgRomcom" loop>
+  <source src="assets/music/romcom1.mp3" type="audio/mpeg">
+</audio>
+<audio id="bgRomcom2" loop>
+  <source src="assets/music/romcom2.mp3" type="audio/mpeg">
+</audio>
+<audio id="bgBirthday">
+  <source src="assets/music/hbd.mp3" type="audio/mpeg">
+</audio>
+
+<!-- small sound effect for envelope opening (uses music folder) -->
+<audio id="sfxPaper">
+  <source src="assets/music/paper-open.mp3" type="audio/mpeg">
+</audio>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2"></script>
+<script src="script.js"></script>
+</body>
+</html>
